@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=d, initial-scale=1.0">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <title>Document</title>
+</head>
+
+
+<body>
+  <header>
+    <!-- header section starts here -->
+    <div class="">
+      <nav>
+        <!-- main-nav menu here -->
+        <div class="flex items-center justify-between bg-blue-950 w-full h-16 relative ">
+          
+          <!-- hotel logo here -->
+          <div>
+            <img class="h-14 w-20 " src="./images/logos-gratis-png-3d-globe-logo-design-removebg-preview.png" alt="">
+          </div>
+
+          <!-- users initials display here -->
+          <div id="show" class="bg-slate-300 w-14 h-14 rounded-full"></div>
+          <div id="avatarDiv" class="col-md-6 text-center" >
+            <img alt="" id="avatar">
+          </div>
+
+          <!-- main nav menu -->
+          <div>
+            <ul class=" flex justify-end items-center space-x-5 mr-4">
+              <li><a class=" text-white text-lg" href="bookRoom.html">Book Room</a></li>
+              <li><a class=" text-white" href="">Home</a></li>
+              <li><a class="text-white " href="">About</a></li>
+              <!-- click on "Sign Up" to bring up the form -->
+              <li><a class=" bg-slate-200 rounded-sm w-10 font-bold text-blue-900" href="" id="signup">Sign Up</a></li>
+                <!-- signup form -->
+                <div class="hidden absolute top-20 right-0 p-5 mr-5 w-60 rounded-lg  bg-slate-200" id="formcont">
+                  <form action="" id="log-form">
+                    <div class=" w-full mx-5">
+                      <label for="" id="email">Email</label>
+                      <input class="border-2 rounded-md p-2 border-slate-500" type="text" placeholder="Your Email">
+                    </div>
+
+                    <div class="w-full mx-5">
+                      <label for="" id="password">password</label>
+                      <input class="border-2 rounded-md p-2 border-slate-500" type="password">
+                    </div>
+                      
+                      <button class="bg-blue-600 text-white font-semibold w-28 rounded-lg" id="submitbtn">Sign in</button>
+                    </label>
+                  </form>
+                </div>
+            </ul>
+          </div>
+          
+        </div>
+        <!-- header background image -->
+        <div class="border-2 border-gray-300 rounded-sm  object-cover ">
+          <img class="object-cover" src="/src/images/hotelbg (2).jpg" alt="">
+        </div>
+        
+        <!-- click here to search for items -->
+        <div class="absolute top-20 left-52 w-auto ml-38 h-10 flex items-center justify-center">
+          <input type="search" placeholder="search" class="pl-2  w-64 h-10 border-2 border-white rounded-lg bg-transparent focus:outline-none">
+            <i class="fa-solid fa-search text-md text-rose-600 opacity-60 hover:opacity-100"></i>
+        </div>
+
+        <!-- side nav menu starts here-->
+        <div class="absolute top-16" id="sidenav">
+          <div class="sub bg-slate-300 w-40">
+            <ul class=" ">
+
+              <li><a href="#" class="flex justify-start items-center font-serif hover:bg-sky-300 ">
+                <span class="block py-2 px-2"><i class="text-orange-500 fa-sharp fa-solid fa-house"></i></span>
+                <p>Home</p>
+              </a></li>
+              
+              <div class="flex justify-start items-center hover:bg-sky-300 px-2">
+                <div>
+                  <i class="text-orange-500 text- fa-solid fa-bed"></i>
+                </div>
+                <div>
+                  <!-- click to see room categories on the side menubar -->
+                  <li class="block py-3 px-4 font-serif" ><a href="#" onclick="dropdown()">Rooms Categories</a></li>
+                    <div class="hidden text-left mt-2  mx-auto" id="submenu">
+                      <!-- submenu inside rooms categories -->
+                      <ul class="">
+                        <li><a class=" hover:text-amber-800 hover:text-3xl" href="/src/standard.html">Standard</a></li>
+                        <li><a class=" hover:text-amber-800 hover:text-3xl" href="/src/studio.html">Studio</a></li>
+                        <li><a class=" hover:text-amber-800 hover:text-3xl" href="/src/delux.html">Delux</a></li>
+                        <li><a class=" hover:text-amber-800 hover:text-3xl" href="/src/sup-delux.html">Super Delux</a></li>
+                      </ul>
+                      <!-- submenu under rooms categories ends -->
+                    </div>
+                </div>
+              </div>
+             
+              <li><a href="#" class="flex justify-start items-center font-serif hover:bg-sky-300 ">
+                <span class="block py-2 px-2"><i class="text-orange-500 fa-solid fa-bed"></i></span>
+                <p>Reservation</p>
+              </a></li>
+              
+              <li><a href="#" class="flex justify-start items-center font-serif hover:bg-sky-300 ">
+                <span class="block py-2 px-2"><i class="text-orange-500 fa-solid fa-users"></i></span>
+                <p>Staff</p>
+              </a></li>
+
+              <li><a href="#" class="flex justify-start items-center font-serif hover:bg-sky-300 ">
+                <span class="block py-2 px-2"><i class="text-orange-500 fa-solid fa-arrow-right-from-bracket"></i></span>
+                <p>Log out</p>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+         <!-- side nav menu ends here-->
+      </nav>
+    </header>
+  </div>
+      <!-- main section starts here -->
+  <main>
+    <section>
+      <div class="my-10 grid justify-center mx-56 ">
+        <h1 class="text-orange-600 text-4xl font-bold grid justify-center font-serif">OUR ROOMS</h1>
+        <p class="text-xl text-gray-500 pt-4 flex items-center justify-center text-center font-sans">Champion Continental Hotel, provide you all the comfort you need. It is located in the heart of <br> Abuja’s city with few KM in distance from Abuja’s beautiful centres</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-5 gap-y-16 mx-5">
+
+      <!-- different rooms categories starts here, click on the "SEE DETAILS" to see more -->
+      <div class="border-2 border-gray-300 rounded-sm  object-cover ">
+        <img src="/src/images/stnd rm1.jpg" alt="">
+        <div class="mx-2 my-2">
+          <h2 class="text-xl font-semibold font-serif">Standard Rooms</h2>
+          <p class="text-l font-semibold font-serif">Start From ₦60,000 per day</p>
+          <p class="font-sans text-gray-500">Standard Furnished Room, Fully Air Conditioned, Energy Saver Room Key, Toilet, Orthopedic Mattress, Chairs, LED TV, Reading Lights, Accessories,</p>
+          <button class="border-md bg-blue-600 text-white w-full h-8 font-serif" data-action="add-to-booking"><a href="/src/standard.html">SEE DETIALS</a></button>
+        </div>
+      </div>
+
+      <div class="border-2 border-gray-300 rounded-sm object-cover ">
+        <img src="/src/images/studio rm1.jpg" alt="">
+        <div class="mx-2 my-2">
+          <h2 class="font-serif text-xl font-semibold">Studio Rooms</h2>
+          <p class="font-serif text-l font-semibold">Start From ₦60,000 PER DAY</p>
+          <p class="font-sans text-gray-500">Comfortable Furnished Room, Fully Air Conditioned, Energy Saver Room Key, Toilet, Orthopedic Mattress, Chairs, LED TV, Reading Lights, Accessories,</p>
+          <button class="border-md bg-blue-600 text-white w-full h-8 font-serif" data-action="add-to-booking"><a href="/src/studio.html">SEE DETIALS</a></button>
+        </div>
+      </div>
+
+      <div class="border-2 border-gray-300 rounded-sm object-cover ">
+        <img src="/src/images/Delux rm1.jpg" alt="">
+        <div class="mx-2 my-2">
+          <h2 class="font-serif text-xl font-semibold">Delux Rooms</h2>
+          <p class="font-serif text-l font-semibold">Sart From ₦70,000 per day</p>
+          <p class="font-sans text-gray-500">Luxury Furnished Room, Fully Air Conditioned, Energy Saver Room Key, Toilet, Orthopedic Mattress, Chairs, LED TV, Reading Lights, Accessories,</p>
+          <button class="border-md bg-blue-600 text-white w-full h-8 font-serif" data-action="add-to-booking"><a href="/src/delux.html">SEE DETIALS</a></button>
+        </div>
+      </div>
+
+      <div class="border-2 border-gray-300 rounded-sm object-cover ">
+        <img class="" id="room-img" src="/src/images/sup-delux3.jpg" alt="">
+        <div class="mx-2 my-2">
+          <h2 id="room-name" class="font-serif text-xl font-semibold">Super Delux Rooms</h2>
+          <p id="room-price" class="font-serif text-l font-semibold">Start From ₦80,000 per day</p>
+          <p class="font-sans text-gray-500">Superior Furnished Room, Fully Air Conditioned, Energy Saver Room Key, Toilet, Orthopedic Mattress, Chairs, LED TV, Reading Lights, Accessories,</p>
+          <button class="border-md bg-blue-600 text-white w-full h-8 font-serif" data-action="add-to-booking"><a href="/src/sup-delux.html">SEE DETIALS</a></button>
+        </div>
+      </div>
+    </section>
+    <!-- different rooms categories ends here, click on the "SEE DETAILS" to see more -->
+    
+    <!-- check room availablity section here -->
+    <section class="availability h-8 mx-5 my-8 bg-orange-500" id="availability">
+      <p class="font-serif text-center text-white">Check room availability</p>
+      <form action="" method="post" class="bg-gray-400 w-full h-36">
+        <div class="flex justify-between mx-3">
+          <div class="box">
+            <p class="text-white">check in <span>*</span></p>
+            <input type="date" name="check_in" class="input" required>
+          </div>
+          <div class="box ">
+            <p class="text-white">check in <span>*</span></p>
+            <input type="date" name="check_in" class="input" required>
+          </div>
+          <div class="box">
+            <p class="text-white">adults<span>*</span></p>
+            <select name="adults" class="input" id="">
+              <option value="1">1 adult</option>
+              <option value="2">2 adults</option>
+              <option value="3">3 adults</option>
+              <option value="4">4 adults</option>
+            </select>
+          </div>
+          <div class="box ">
+            <p class="text-white">child<span>*</span></p>
+            <select name="child" class="input" required id="">
+              <option value="-">0 child</option>
+              <option value="2">1 child</option>
+              <option value="3">2 children</option>
+              <option value="4">3 children</option>
+            </select>
+          </div>
+          <div class="">
+            <p class="text-white">rooms<span>*</span></p>
+            <select name="child" class="input" required id="">
+              <option value="-">1 standard room</option>
+              <option value="2">2 standard room </option>
+              <option value="3">1 studio room</option>
+              <option value="4">2 studio room</option>
+              <option value="-">1 delux room</option>
+              <option value="2">2 delux room </option>
+              <option value="3">1 sup-delux room</option>
+              <option value="4">2 sup-delux room</option>
+            </select>
+          </div>
+        </div>
+        <div class="text-center hover:text-white hover:font-bold">
+          <button id="check" class="bg-fuchsia-500 border-2 w-40 h-8 items-center justify-center mt-5 text-sm " ><a href="" onclick="avail()">CHECK AVAILABILITY</a></button>
+        </div>
+      </form>
+      <!-- check room availablity section ends -->
+    </section>
+  </main>
+  <!-- footer starts here -->
+  <footer class="mt-20 pt-8">
+    <div class=" bg-slate-600 h-72 mt-10">
+      <div class="my-14 py-8 grid gap-4 grid-cols-4 ">
+        <ul class="grid gap-y-4 mx-8">
+          <li><img class="h-16 w-20" src="/src/images/logos-gratis-png-3d-globe-logo-design-removebg-preview.png" alt="logo"></li>
+          <li class="font-bold"></li>
+          <li class="text-gray-400"><a href="#">Home</a></li>
+          <li class="text-gray-400"><a href="#">Book Now</a></li>
+          <li class="text-gray-400"><a href="#">Sercices</a></li>
+        </ul>
+        <ul class="grid gap-y-4">
+          <li class="font-bold">News</a></li>
+          <li class="text-gray-400"><a href="#">About</li>
+          <li class="text-gray-400"><a href="#">Career</a></li>
+          <li class="text-gray-400"><a href="#">Login</a></li>
+        </ul>
+        <ul class="grid gap-y-4">
+          <li class="font-bold">Galeries</li>
+          <li class="text-gray-400"><a href="#">Enquiries</a></li>
+          <li class="text-gray-400"><a href="#">Reviews</a></li>
+          <li class="text-gray-400"><a href="#">Sign Up</a></li>
+        </ul>
+
+        <div class="grid gap-y-4">
+          <ul class="grid gap-y-4">
+            <li><p class="font-bold">Social Media</p></li>
+            <li class="text-gray-400"><a href="#">Twitter</a></li>
+            <li class="text-gray-400"><a href="#">Instagram</a></li>
+            <li class="text-gray-400">Facebook</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  </footer>
+
+  <script src="/src/index.js"></script>
+</body>
+</html>
